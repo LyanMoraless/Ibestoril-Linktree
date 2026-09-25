@@ -49,3 +49,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// Função para copiar o PIX (CNPJ)
+window.copyPix = function(e, chave) {
+  e.preventDefault();
+  const chaveLimpa = chave.replace(/\D/g, ''); 
+  
+  navigator.clipboard.writeText(chaveLimpa).then(() => {
+    const toast = document.getElementById('toast');
+    
+    // Mostra o Toast
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    
+    // Oculta após 3 segundos
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+    }, 3000);
+  }).catch(err => {
+    alert('Não foi possível copiar a chave Pix automaticamente. O CNPJ é: ' + chave);
+  });
+};

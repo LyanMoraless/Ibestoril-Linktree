@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ibe-bg text-ibe-text antialiased selection:bg-ibe-accent selection:text-white;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply relative overflow-hidden rounded-3xl flex flex-col justify-between 
+           bg-white/10 backdrop-blur-xl 
+           border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.2),_0_8px_32px_rgba(0,0,0,0.3)]
+           transition-all duration-300 hover:bg-white/15;
+  }
+}
+
+/* Esconde barras de rolagem mas permite scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

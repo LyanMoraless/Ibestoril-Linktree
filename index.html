@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Igreja Batista do Estoril - Links</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Bebas+Neue&family=Noto+Serif+Display:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-ibe-bg text-ibe-text antialiased selection:bg-ibe-accent selection:text-white relative">
+    
+    <!-- Video Background Fixo -->
+    <div class="fixed inset-0 w-full h-full z-0 overflow-hidden">
+      <!-- Placeholder de Vídeo -->
+      <video autoplay loop muted playsinline class="w-full h-full object-cover scale-105">
+        <source src="./media/0924.mp4" type="video/mp4" />
+      </video>
+      <!-- Overlay Escuro para garantir legibilidade (Mistura o azul da marca com o vídeo) -->
+      <div class="absolute inset-0 bg-ibe-bg/60 mix-blend-multiply"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent via-ibe-bg/50 to-ibe-bg"></div>
+    </div>
+
+    <!-- Conteúdo em Scroll -->
+    <div id="app" class="relative z-10 w-full flex flex-col items-center">
+      
+      <!-- Primeira Impressão (Hero) -->
+      <header class="pt-20 pb-8 md:pt-28 md:pb-12 w-full max-w-4xl px-4 flex flex-col items-center justify-center text-center">
+        
+        <!-- Logo Substituindo Texto -->
+        <img src="./media/Logo_Ibestoril.png" alt="Ibestoril" class="gsap-hero-item h-16 md:h-20 w-auto object-contain mb-6 drop-shadow-lg" />
+        
+        <p class="gsap-hero-item font-sans text-white/90 text-[10px] md:text-sm tracking-[0.2em] uppercase max-w-md mx-auto drop-shadow-md leading-relaxed">
+          Sob a cruz de Cristo,<br/>para a glória de Deus!
+        </p>
+
+        <!-- Indicador de Scroll (Agora relativo e mais próximo) -->
+        <div class="gsap-hero-item mt-8 flex flex-col items-center opacity-70 animate-bounce">
+          <i class="ph-bold ph-caret-down text-xl"></i>
+        </div>
+      </header>
+
+      <!-- Bento Grid (Glassmorphism) -->
+      <main class="w-full max-w-4xl px-4 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 pb-24">
+        
+        <!-- 0. YouTube (Permanece no topo em ambas visualizações) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-2 md:col-span-2 md:row-span-2 group min-h-[250px] p-6 opacity-0 translate-y-4">
+          <!-- Imagem de Capa -->
+          <div class="absolute inset-0 z-0 bg-[url('./media/BANNER.png')] bg-cover bg-center opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"></div>
+          <!-- Gradient Escuro para Leitura -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-ibe-bg/90 via-ibe-bg/20 to-transparent"></div>
+          
+          <div class="relative z-20 flex justify-between items-start">
+            <div class="w-12 h-12 bg-red-600/90 rounded-full flex items-center justify-center shadow-lg border border-red-500/50 backdrop-blur-md transition-transform group-hover:scale-110">
+              <i class="ph-fill ph-play text-white text-xl"></i>
+            </div>
+            <i class="ph-bold ph-arrow-up-right text-white/50 text-xl group-hover:text-white transition-colors"></i>
+          </div>
+          <div class="relative z-20 mt-auto">
+            <h2 class="font-bebas text-4xl text-white mb-1 uppercase tracking-wide drop-shadow-lg">Culto ao Vivo</h2>
+            <p class="font-sans text-sm text-white/90 drop-shadow-md">Acompanhe nossas mensagens no YouTube</p>
+          </div>
+        </a>
+
+        <!-- 1. Dízimos e Ofertas (Linha 1 no Mobile, Col 3 no Desktop) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-2 md:col-span-1 p-6 min-h-[180px] group opacity-0 translate-y-4">
+          <!-- Imagem de Capa -->
+          <div class="absolute inset-0 z-0 bg-[url('./media/LE1_2210.JPG')] bg-cover bg-[center_30%] opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
+          <!-- Blur e Tom de Azul Sobre a Imagem -->
+          <div class="absolute inset-0 z-10 bg-ibe-accent/40 backdrop-blur-[1px] group-hover:bg-ibe-accent/30 transition-colors duration-500"></div>
+          <!-- Gradient para garantir leitura -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-ibe-bg/70 to-transparent"></div>
+
+          <div class="relative z-20 flex justify-between items-start mb-4">
+            <div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20">
+              <i class="ph-fill ph-heart text-white text-xl"></i>
+            </div>
+            <i class="ph-bold ph-arrow-up-right text-white/50 text-xl group-hover:text-white transition-colors"></i>
+          </div>
+          <div class="relative z-20 mt-auto">
+            <h2 class="font-bebas text-3xl text-white mb-1 uppercase tracking-wide drop-shadow-md">Dízimos e Ofertas</h2>
+            <p class="font-sans text-xs text-white/90 drop-shadow-md leading-relaxed">Contribua com a Obra do Senhor</p>
+          </div>
+        </a>
+
+        <!-- 2a. Site Oficial (Metade da Linha 2 no Mobile) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-1 md:col-span-1 p-4 md:p-6 opacity-0 translate-y-4">
+          <div class="flex justify-between items-start mb-4">
+            <i class="ph-fill ph-globe text-white/80 text-3xl"></i>
+            <i class="ph-bold ph-arrow-up-right text-white/50 text-xl group-hover:text-white transition-colors"></i>
+          </div>
+          <div class="mt-auto">
+            <h2 class="font-bebas text-2xl md:text-2xl text-white mb-1 uppercase tracking-wide">Site Oficial</h2>
+            <p class="font-sans text-[10px] md:text-xs text-white/60 line-clamp-1">ibestoril.com.br</p>
+          </div>
+        </a>
+
+        <!-- 2b. Coluna JC Net (Metade da Linha 2 no Mobile) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-1 md:col-span-1 p-4 md:p-6 opacity-0 translate-y-4">
+          <div class="flex justify-between items-start mb-4">
+            <i class="ph-fill ph-newspaper text-white/80 text-3xl"></i>
+            <i class="ph-bold ph-arrow-up-right text-white/50 text-xl"></i>
+          </div>
+          <div class="mt-auto">
+            <h2 class="font-bebas text-2xl md:text-2xl text-white mb-1 uppercase tracking-wide">Coluna JC Net</h2>
+            <p class="font-sans text-[10px] md:text-xs text-white/60 line-clamp-1">Artigos e reflexões</p>
+          </div>
+        </a>
+
+        <!-- 3. Atividades (Linha 3 no Mobile) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-2 md:col-span-2 p-6 min-h-[180px] group opacity-0 translate-y-4">
+          <!-- Imagem de Capa -->
+          <div class="absolute inset-0 z-0 bg-[url('./media/ATIVIDADES.png')] bg-cover bg-[center_35%] opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"></div>
+          <!-- Gradient Escuro para Leitura -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-ibe-bg/90 via-ibe-bg/20 to-transparent"></div>
+
+          <div class="relative z-20 flex justify-between items-start mb-4">
+            <div class="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 transition-transform group-hover:scale-110">
+              <i class="ph-fill ph-calendar-blank text-white text-xl"></i>
+            </div>
+            <i class="ph-bold ph-arrow-up-right text-white/50 text-xl group-hover:text-white transition-colors"></i>
+          </div>
+          <div class="relative z-20 mt-auto">
+            <h2 class="font-bebas text-3xl text-white mb-1 uppercase tracking-wide drop-shadow-md">Nossas Atividades</h2>
+            <p class="font-sans text-sm text-white/90 drop-shadow-md">Agenda de cultos e encontros</p>
+          </div>
+        </a>
+
+        <!-- 4. Localização (Linha 4 no Mobile) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-2 md:col-span-1 p-6 min-h-[200px] group opacity-0 translate-y-4">
+          <!-- Imagem de Capa -->
+          <div class="absolute inset-0 z-0 bg-[url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
+          <!-- Gradient Escuro para Leitura -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-ibe-bg/90 to-transparent"></div>
+          
+          <div class="relative z-20 flex justify-between items-start h-full flex-col">
+            <i class="ph-fill ph-map-pin text-white/90 text-3xl drop-shadow-md"></i>
+            <div class="mt-auto">
+              <h2 class="font-bebas text-2xl text-white mb-1 uppercase tracking-wide drop-shadow-md">Localização</h2>
+              <p class="font-sans text-xs text-white/80 drop-shadow-md">Rua Virgílio Malta, 21-59<br/>Jardim Estoril, Bauru - SP</p>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. Spotify (Linha 5 no Mobile) -->
+        <a href="#" class="gsap-stagger-item glass-card col-span-2 md:col-span-1 p-6 min-h-[180px] group opacity-0 translate-y-4">
+          <!-- Imagem de Capa -->
+          <div class="absolute inset-0 z-0 bg-[url('./media/GIS_7665.JPG')] bg-cover bg-center opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-700"></div>
+          <!-- Gradient Escuro para Leitura -->
+          <div class="absolute inset-0 z-10 bg-gradient-to-t from-ibe-bg/90 via-ibe-bg/20 to-transparent"></div>
+          
+          <div class="relative z-20 flex justify-between items-start mb-4">
+            <i class="ph-fill ph-spotify-logo text-[#1DB954] text-4xl drop-shadow-lg"></i>
+            <i class="ph-bold ph-arrow-up-right text-white/50 text-xl group-hover:text-white transition-colors"></i>
+          </div>
+          <div class="relative z-20 mt-auto">
+            <h2 class="font-bebas text-2xl text-white mb-1 uppercase tracking-wide drop-shadow-md">Spotify</h2>
+            <p class="font-sans text-xs text-white/90 drop-shadow-md">Ouça nossa playlist e séries de estudo bíblico</p>
+          </div>
+        </a>
+
+        <!-- 6. WhatsApp / Contato (Botão Fino - Linha 6) -->
+        <a href="https://wa.me/5514998222818?text=Ol%C3%A1%2C%20vim%20pelo%20Instagram%20da%20Ibestoril" target="_blank" rel="noopener noreferrer" class="gsap-stagger-item col-span-2 md:col-span-3 bg-[#25D366] hover:bg-[#1EBE57] transition-colors duration-300 rounded-2xl flex items-center justify-center p-4 shadow-[0_4px_20px_rgba(37,211,102,0.3)] opacity-0 translate-y-4">
+          <i class="ph-fill ph-chat-circle text-white text-3xl mr-3"></i>
+          <h2 class="font-bebas text-2xl text-white uppercase tracking-wide pt-1 drop-shadow-sm">Contate-nos</h2>
+        </a>
+
+      </main>
+      
+      <footer class="text-center text-xs text-white/40 pb-12 font-sans relative z-10">
+        Igreja Batista do Estoril &copy; 2026. Todos os direitos reservados.
+      </footer>
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
